@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+	<form action="/process_add_item" method="post">
+		<h4>Enter Item Name</h4>
+		<input type="text" name="item" required>
+		<input type="submit" name="additem">
+	</form>
+	 
+
+{% endblock %}

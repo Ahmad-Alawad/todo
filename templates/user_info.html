@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<h4>User ID : {{ user.user_id }}</h4>
+	<h4>Name    : {{ user.display_name }}</h4>
+
+	
+	<ul id="listOfItems">
+		{% for item in todo_items %}
+			<li>
+				<h5>{{ item.item_name }}</h5>
+			</li>
+		{% endfor %}
+	</ul>
+
+	<form action="/add_item">
+		<input type="submit" value="Add Item">
+	</form>
+
+
+
+{% endblock %}
